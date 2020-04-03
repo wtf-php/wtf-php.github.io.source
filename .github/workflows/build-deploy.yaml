@@ -1,0 +1,28 @@
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v1
+      - name: Install Composer Dependencies
+        run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+      - name: Install NPM Dependencies
+        run: npm install
+      - name: Build Site
+        run: npm run production
+      - name: Deploy
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          repo: wtf-php/wtf-php.github.io
+          target_branch: master
+          build_dir: build_production
+        env:
+          GITHUB_PAT: ${{ secrets.ACCESS_TOKEN }}
