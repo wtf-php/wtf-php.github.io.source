@@ -20,7 +20,7 @@
 
     <div class="mb-6">
         <h2>Members</h2>
-        <ul>
+        <ul class="list-none">
             <li><a href="https://github.com/fetzi" target="_blank">Johannes Pichler (fetzi)</a></li>
             <li><a href="https://github.com/witti" target="_blank">Daniel Wittberger (witti)</a></li>
             <li><a href="https://github.com/dahu" target="_blank">Daniela Huber (dahu)</a></li>
