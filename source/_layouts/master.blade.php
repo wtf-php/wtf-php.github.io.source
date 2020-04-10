@@ -19,10 +19,6 @@
 
         @stack('meta')
 
-        @if ($page->production)
-            <!-- Insert analytics code here -->
-        @endif
-
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
@@ -32,7 +28,7 @@
             <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">
                     <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
-                        <h1 class="text-lg md:text-2xl text-orange-700 font-semibold hover:text-orange-500 my-0">{{ $page->siteName }}</h1>
+                        <img src="/assets/img/logo_wtfphp_durchsichtig_RGB.svg" alt="{{ $page->siteName }}" class="block h-20 w-20 text-orange-700 hover:text-orange-500">
                     </a>
                 </div>
 
